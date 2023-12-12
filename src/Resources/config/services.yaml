@@ -1,0 +1,17 @@
+services:
+    Tmtk\AwsLoggerBundle\Service\Aws:
+        arguments:
+            - ''
+            - ''
+    Tmtk\AwsLoggerBundle\Service\AwsLogger:
+        arguments:
+            - '@Tmtk\AwsLoggerBundle\Service\Aws'
+            - 'webservice-calls'
+            - 'webservice-calls.log'
+    Tmtk\AwsLoggerBundle\EventSubscriber\EventSubscriber:
+        arguments:
+            - '@Tmtk\AwsLoggerBundle\Service\AwsLogger'
+            - '@logger'
+            - true
+            - false
+        tags: [kernel.event_subscriber]

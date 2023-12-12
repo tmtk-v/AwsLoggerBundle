@@ -1,0 +1,21 @@
+{
+    "name": "tmtk/aws-logger-bundle",
+    "type": "symfony-bundle",
+    "description": "Un bundle Symfony aidant à logger vos appels web service sur AWS.",
+    "keywords": ["php", "symfony", "web service logger", "aws logger"],
+    "license": "MIT",
+    "require": {
+        "aws/aws-sdk-php": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Tarik",
+            "email": "tarik128.contact@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tmtk\\AwsLoggerBundle\\": "src/"
+        }
+    }
+}
